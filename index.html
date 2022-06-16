@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GALLERY</title>
     <link rel="stylesheet" href="style-gallery.css">
 </head>
-<body>
-    <a href="index-editor.html"></a>
-    <h2>galleryyy</h2>
-    
+
+<body onload="initGallery()">
+
     <section class="gallery">
+        <ul class="pictures "> </ul>
+    </section>
+
+    <section class="editor-page">
+        <canvas class="canvas-container" height="500" width="500">
+        </canvas>
+
+        <section class="editor-tools">
+            <input type="text" name="add-text" oninput="setLineTxt()">
+            <div class="row">Set Text Color
+                <input type="color" name="txt-color" value="#ff9190" oninput="setTxtColor(this.value)">
+            </div>
+          <button onclick="switchLine()">switch line</button>
+            
+            <img src="icons/increase font - icon.png" class="increase-font" onclick="changeTxtSize(1)">
+            <img src="icons/decrease font - icon.png" class="increase-font" onclick="changeTxtSize(-1)">
+        </section>
 
     </section>
 
-  <section class="img-container">
-        <img src="meme-imgs(square)/1.jpg" class="img1" style="display: none">
-        <img src="meme-imgs(square)/2.jpg" class="img2" style="display: none">
-        <img src="meme-imgs(square)/3.jpg" class="img3" style="display: none">
-        <img src="meme-imgs(square)/4.jpg" class="img4" style="display: none">
-    </section>
+    <div class="img-teporary-container">
+    </div>
+
 
     <script src="js-gallery/galleryController.js"></script>
     <script src="js-gallery/galleryService.js"></script>
+    <script src="js-editor/editorController.js"></script>
+    <script src="js-editor/editorService.js"></script>
 </body>
+
 </html>

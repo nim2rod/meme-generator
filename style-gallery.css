@@ -1,3 +1,29 @@
 body{
     background-color: aqua;
 }
+
+.pictures{
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.main-layout {
+    max-width: 980px;
+    margin: 0 auto;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    box-sizing: content-box;
+}
+
+canvas{
+    color: rgb(139, 51, 186);
+}
+
+.increase-font{
+    background-color: white;
+    border-radius: 30%;
+    padding: 2%;
+    height: 50px;
+}
