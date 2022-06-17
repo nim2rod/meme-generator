@@ -1,12 +1,14 @@
-body{
-    background-color: aqua;
+@import 'style-helpers.css';
+@import 'font-setup.css';
+
+* {
+    box-sizing: border-box;
 }
 
-.pictures{
-    width: 50%;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+body {
+    margin: 0;
+    background-color: rgb(252, 243, 243);
+    height: 100vh;
 }
 
 .main-layout {
@@ -15,13 +17,101 @@ body{
     padding-left: 1.6rem;
     padding-right: 1.6rem;
     box-sizing: content-box;
+    background-color: rgb(229, 222, 222);
 }
 
-canvas{
+.header-container {
+    background-color: rgb(211, 141, 11);
+    color: whitesmoke;
+    height: 5vh;
+    align-items: center;
+}
+
+.main-logo{
+    font-family: Eurofurenceregular;
+    font-size: 30px;
+}
+
+.btn-gallery-header{
+    background: border-box;
+    border: aliceblue;
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.right-side-header{
+    font-size: 21px;
+}
+
+.search-bar {
+    background-color: white;
+    height: 6vh;
+}
+
+.gallery {
+    width: 100%;
+}
+
+.promotion-bar{
+    background-color: white;
+    height: 30vh;
+    display: flex;
+    align-items: center
+}
+
+.promotion-pic{
+    height: 75%;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.social-icon-box{
+    background-color: rgb(211, 141, 11);
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons{
+    width: 25px;
+    color: aliceblue;
+}
+
+.main-footer{
+    background-color: rgb(211, 141, 11);
+    color: whitesmoke;
+    font-size: x-small;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.logo-footer{
+    font-family: Eurofurenceregular;
+    font-size: 30px;
+}
+
+.img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 32.7%;
+    margin-right: 5px;
+}
+
+.editor-page {
+    display: none;
+}
+
+canvas {
     color: rgb(139, 51, 186);
 }
 
-.increase-font{
+.increase-font {
     background-color: white;
     border-radius: 30%;
     padding: 2%;

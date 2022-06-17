@@ -19,22 +19,12 @@ var gMeme = {
     ]  
 }
 
+
+
 function getMeme(){
     console.log('getMeme is on');
     renderMeme()
 }
 
-function setLineTxt(){
-const txt = document.querySelector('[name="add-text"]').value
 
-gMeme.lines[gLine].txt = txt
-renderMeme()
-}
 
-function setTxtColor(color){
-    console.log('settxtColor is on- color:',color);
-    gMeme.lines[gLine].color = color
-    renderTxtLine()
-}
-
-var gLine = 0
