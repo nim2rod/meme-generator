@@ -21,12 +21,14 @@
     }
     p{
       font-size: 12px; 
-      width: 152px;
+      /* width: 152px; */
       text-align: center;
     }
     .social-icon-box{
-        height: 32px;
-        width: 32px;
+        /* height: 32px;
+        width: 32px; */
+        height: 100%;
+        width: 100%;
     }
     
 
