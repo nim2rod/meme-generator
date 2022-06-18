@@ -40,7 +40,13 @@
     .editor-page{
         flex-direction: column;
     }
+
+    canvas{
+        width: 100%;
+    }
 }
+
+
 
 @media (min-width: 740px) {
 
