@@ -5,7 +5,9 @@ var gLine = 0
 
 function initEditor() {
   console.log('initt editor')
-document.querySelector('.editor-page').style.display = 'block'
+  document.querySelector('.editor-page').style.display = 'flex'
+  document.querySelector('.promotion-bar').style.display = 'none'
+  document.querySelector('.search-bar').style.display = 'none'
   gElCanvas = document.querySelector('canvas')
   gCtx = gElCanvas.getContext('2d')
   console.log(gCtx.globalCompositeOperation)

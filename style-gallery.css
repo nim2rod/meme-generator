@@ -1,12 +1,13 @@
 @import 'style-helpers.css';
 @import 'font-setup.css';
+@import 'mq.css';
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+    margin: 0px;
     background-color: rgb(252, 243, 243);
     height: 100vh;
 }
@@ -56,19 +57,19 @@ body {
     background-color: white;
     height: 30vh;
     display: flex;
-    align-items: center
+    align-items: center;
 }
-
+/* 
 .promotion-pic{
     height: 75%;
     margin-top: 10px;
     margin-left: 100px;
-}
+} */
 
 .social-icon-box{
     background-color: rgb(211, 141, 11);
-    height: 45px;
-    width: 45px;
+    /* height: 45px;
+    width: 45px; */
     margin-right: 10px;
     border-radius: 25%;
     display: flex;
@@ -88,7 +89,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    height: 15vh;
+    justify-content: center;
 }
 
 .logo-footer{
@@ -105,13 +107,33 @@ body {
 
 .editor-page {
     display: none;
+    align-items: center;
+    justify-content: space-around;
 }
 
 canvas {
     color: rgb(139, 51, 186);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.increase-font {
+.editor-tools{
+background-color: antiquewhite;
+height: 47vh;
+width: 35vh;
+
+}
+
+.txt-box{
+    width: 210px;
+    height: 40px;
+    border-radius: 2em;
+    background-color: #ffffff;
+    border: 1px solid #c2c2c2;
+    padding-left: 20%;
+}
+
+.tool-icon {
     background-color: white;
     border-radius: 30%;
     padding: 2%;

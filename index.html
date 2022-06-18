@@ -31,14 +31,13 @@
         </canvas>
 
         <section class="editor-tools">
-            <input type="text" name="add-text" oninput="setLineTxt()">
-            <div class="row">Set Text Color
+            <input type="text" class="txt-box" name="add-text" placeholder="Type here" oninput="setLineTxt()">
+            <div> <img class="tool-icon" src="icons/paint-board-and-brush.png">  
                 <input type="color" name="txt-color" value="#ff9190" oninput="setTxtColor(this.value)">
             </div>
-          <button onclick="switchLine()">switch line</button>
-            
-            <img src="icons/increase font - icon.png" class="increase-font" onclick="changeTxtSize(1)">
-            <img src="icons/decrease font - icon.png" class="increase-font" onclick="changeTxtSize(-1)">
+            <img class="tool-icon" onclick="switchLine()" src="icons/up-and-down-opposite-double-arrows-side-by-side.png" >
+            <img src="icons/increase font - icon.png" class="tool-icon" onclick="changeTxtSize(1)">
+            <img src="icons/decrease font - icon.png" class="tool-icon" onclick="changeTxtSize(-1)">
         </section>
 
     </section>
