@@ -5,7 +5,7 @@ var gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            txt:  'insert your text here',
+            txt:  'insert your text',
             size: 40,
             color: 'white',
             align: 'center'
