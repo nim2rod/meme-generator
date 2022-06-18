@@ -5,13 +5,11 @@ var gLine = 0
 
 
 function initEditor() {
-  console.log('initt editor')
   document.querySelector('.editor-page').style.display = 'flex'
   document.querySelector('.promotion-bar').style.display = 'none'
   document.querySelector('.search-bar').style.display = 'none'
   gElCanvas = document.querySelector('canvas')
   gCtx = gElCanvas.getContext('2d')
-  console.log(gCtx.globalCompositeOperation)
   getMeme()
 }
 
@@ -89,42 +87,42 @@ if(value === 'center') gMeme.lines[0].align = 'center'
 renderMeme()
 }
 
-function share(){
-  var shareBtn = document.querySelector('.share-btn')
-  shareBtn.addEventListener('click', event => {
-    if(navigator.share) {
-      navigator.share({
-        text: 'great seccess ',
-        url: 'https://www.google.com/'
-      }).then(() => { 
-        console.log('thanks for sharing!')
-      })
-      .catch((err) => console.error(err))
-    } else{
-      alert('this browser is not support sharing')
-    }
-  })
-}
+// function share(){
+//   var shareBtn = document.querySelector('.share-btn')
+//   shareBtn.addEventListener('click', event => {
+//     if(navigator.share) {
+//       navigator.share({
+//         text: 'great seccess ',
+//         url: 'https://www.google.com/'
+//       }).then(() => { 
+//         console.log('thanks for sharing!')
+//       })
+//       .catch((err) => console.error(err))
+//     } else{
+//       alert('this browser is not support sharing')
+//     }
+//   })
+// }
 
-function shareCanvas(){
-  async function shareCanvas() {
-    const canvasElement = document.getElementById('canvas-id');
-    const dataUrl = canvasElement.toDataURL();
-    const blob = await (await fetch(dataUrl)).blob();
-    const filesArray = [
-      new File(
-        [blob],
-        'animation.png',
-        {
-          type: blob.type,
-          lastModified: new Date().getTime()
-        }
-      )
-    ];
-    const shareData = {
-      files: filesArray,
-    };
-    navigator.share(shareData);
-  }
-  console.log('share canvas');
-}
+// function shareCanvas(){
+//   async function shareCanvas() {
+//     const canvasElement = document.getElementById('canvas-id');
+//     const dataUrl = canvasElement.toDataURL();
+//     const blob = await (await fetch(dataUrl)).blob();
+//     const filesArray = [
+//       new File(
+//         [blob],
+//         'animation.png',
+//         {
+//           type: blob.type,
+//           lastModified: new Date().getTime()
+//         }
+//       )
+//     ];
+//     const shareData = {
+//       files: filesArray,
+//     };
+//     navigator.share(shareData);
+//   }
+//   console.log('share canvas');
+// }

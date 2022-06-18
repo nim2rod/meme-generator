@@ -6,7 +6,8 @@ function downloadImg(elLink) {
 }
 
 function onImgInput(ev) {
-    loadImageFromInput(ev, renderImg)
+    loadImageFromInput(ev, renderImg2)
+    onImgSelect()
 }
 //                               CallBack func will run on success load of the img
 function loadImageFromInput(ev, onImageReady) {
@@ -20,3 +21,53 @@ function loadImageFromInput(ev, onImageReady) {
     }
     reader.readAsDataURL(ev.target.files[0]) // Read the file we picked
 }
+
+function renderImg2(img) {
+    //Draw the img on the canvas
+    gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
+}
+
+
+
+
+
+
+function share(){
+    var shareBtn = document.querySelector('.share-btn')
+    shareBtn.addEventListener('click', event => {
+      if(navigator.share) {
+        navigator.share({
+          text: 'great seccess ',
+          url: 'https://www.google.com/'
+        }).then(() => { 
+          console.log('thanks for sharing!')
+        })
+        .catch((err) => console.error(err))
+      } else{
+        alert('this browser is not support sharing')
+      }
+    })
+  }
+  
+  function shareCanvas(){
+    async function shareCanvas() {
+      const canvasElement = document.getElementById('canvas-id');
+      const dataUrl = canvasElement.toDataURL();
+      const blob = await (await fetch(dataUrl)).blob();
+      const filesArray = [
+        new File(
+          [blob],
+          'animation.png',
+          {
+            type: blob.type,
+            lastModified: new Date().getTime()
+          }
+        )
+      ];
+      const shareData = {
+        files: filesArray,
+      };
+      navigator.share(shareData);
+    }
+    console.log('share canvas');
+  }

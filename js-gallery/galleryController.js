@@ -5,9 +5,8 @@ function initGallery(){
     renderGallery()
 }
 
-function onImgSelect(picId){  
+function onImgSelect(picId=2){  
 gMeme.selectedImgId = picId
-console.log('gMeme:',gMeme);
 var elGallery = document.querySelector('.gallery')
 elGallery.style.display = 'none'
 initEditor()
