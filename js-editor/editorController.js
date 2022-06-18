@@ -38,7 +38,7 @@ function renderTxtLine() {
   gCtx.font = fontSize + 'px Impact'
 
   gCtx.lineWidth = 3
-  gCtx.strokeStyle = 'yellow'
+  gCtx.strokeStyle = 'black'
 
   gCtx.fillStyle = gMeme.lines[0].color // txtColor
 
@@ -46,6 +46,9 @@ function renderTxtLine() {
 
   var line1 = gMeme.lines[0].txt
   var line2 = gMeme.lines[1].txt
+
+gCtx.strokeText(line1 , 250 , 100)  //stroke
+gCtx.strokeText(line2 , 250 , 350)
 
   gCtx.fillText(line1, 250, 100) // input txt
   gCtx.fillText(line2, 250, 350)
