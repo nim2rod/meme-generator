@@ -29,13 +29,10 @@ function renderImg() {
 }
 
 function renderTxtLine() {
-  // for(var i = 1 ; i<gMeme.lines.length ; i++){
-
-  // }
   var fontSize = gMeme.lines[0].size // fontSize
   gCtx.font = fontSize + 'px Impact'
 
-  gCtx.lineWidth = 3
+  gCtx.lineWidth = 3.5
   gCtx.strokeStyle = 'black'
 
   gCtx.fillStyle = gMeme.lines[0].color // txtColor
@@ -45,8 +42,8 @@ function renderTxtLine() {
   var line1 = gMeme.lines[0].txt
   var line2 = gMeme.lines[1].txt
 
-gCtx.strokeText(line1 , 250 , 100)  //stroke
-gCtx.strokeText(line2 , 250 , 350)
+  gCtx.strokeText(line1, 250, 100)  //stroke
+  gCtx.strokeText(line2, 250, 350)
 
   gCtx.fillText(line1, 250, 100) // input txt
   gCtx.fillText(line2, 250, 350)
@@ -79,49 +76,9 @@ function switchLine() {
   gLine === 0 ? (gLine = 1) : (gLine = 0)
 }
 
-function changeAlignTxt(value){
-if(value === 'rtl') gMeme.lines[0].align = 'right'
-if(value === 'ltr') gMeme.lines[0].align = 'left'
-if(value === 'center') gMeme.lines[0].align = 'center'
-renderMeme()
+function changeAlignTxt(value) {
+  if (value === 'rtl') gMeme.lines[0].align = 'right'
+  if (value === 'ltr') gMeme.lines[0].align = 'left'
+  if (value === 'center') gMeme.lines[0].align = 'center'
+  renderMeme()
 }
-
-// function share(){
-//   var shareBtn = document.querySelector('.share-btn')
-//   shareBtn.addEventListener('click', event => {
-//     if(navigator.share) {
-//       navigator.share({
-//         text: 'great seccess ',
-//         url: 'https://www.google.com/'
-//       }).then(() => { 
-//         console.log('thanks for sharing!')
-//       })
-//       .catch((err) => console.error(err))
-//     } else{
-//       alert('this browser is not support sharing')
-//     }
-//   })
-// }
-
-// function shareCanvas(){
-//   async function shareCanvas() {
-//     const canvasElement = document.getElementById('canvas-id');
-//     const dataUrl = canvasElement.toDataURL();
-//     const blob = await (await fetch(dataUrl)).blob();
-//     const filesArray = [
-//       new File(
-//         [blob],
-//         'animation.png',
-//         {
-//           type: blob.type,
-//           lastModified: new Date().getTime()
-//         }
-//       )
-//     ];
-//     const shareData = {
-//       files: filesArray,
-//     };
-//     navigator.share(shareData);
-//   }
-//   console.log('share canvas');
-// }

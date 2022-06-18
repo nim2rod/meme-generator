@@ -53,6 +53,14 @@
         margin-left: 30px;
         }
 
+        .download-btn{
+            font-size: 17px;
+        }
+
+        .editor-tools {
+            gap: 6px;
+        }
+
 }
 
 
@@ -79,5 +87,12 @@
 
     .file-input{
     font-size: 20px;
+    }
+
+    .download-btn{
+        font-size: 30px;
+    }
+    .editor-tools {
+        gap: 10px;
     }
 }
