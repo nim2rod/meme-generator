@@ -105,3 +105,25 @@ function share(){
     }
   })
 }
+
+function shareCanvas(){
+  async function shareCanvas() {
+    const canvasElement = document.getElementById('canvas-id');
+    const dataUrl = canvasElement.toDataURL();
+    const blob = await (await fetch(dataUrl)).blob();
+    const filesArray = [
+      new File(
+        [blob],
+        'animation.png',
+        {
+          type: blob.type,
+          lastModified: new Date().getTime()
+        }
+      )
+    ];
+    const shareData = {
+      files: filesArray,
+    };
+    navigator.share(shareData);
+  }
+}

@@ -27,14 +27,15 @@
     </section>
 
     <section class="editor-page main-layout">
-        <canvas class="canvas-container" height="500" width="500">
+        <canvas class="canvas-container" height="500" width="500" id="canvas-id">
         </canvas>
 
         <section class="editor-tools">
             <input type="text" class="txt-box" name="add-text" placeholder="Type here" oninput="setLineTxt()">
             <div> <img class="tool-icon" src="icons-new/brush-new.png">  
                 <input type="color" name="txt-color" value="#ff9190" oninput="setTxtColor(this.value)">
-                <button class="share-btn" onclick="share()">shareee</button>
+                <button class="share-btn" onclick="share()">share url</button>
+                <button class="share-btn" onclick="shareCanvas()">share canvas</button>
             </div>
             <div >
                 <img class="tool-icon" onclick="switchLine()" src="icons-new/switch-new.png" >
