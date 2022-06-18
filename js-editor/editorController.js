@@ -74,3 +74,10 @@ function setTxtColor(color) {
 function switchLine() {
   gLine === 0 ? (gLine = 1) : (gLine = 0)
 }
+
+function changeAlignTxt(value){
+if(value === 'rtl') gMeme.lines[0].align = 'right'
+if(value === 'ltr') gMeme.lines[0].align = 'left'
+if(value === 'center') gMeme.lines[0].align = 'center'
+renderMeme()
+}

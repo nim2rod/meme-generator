@@ -35,12 +35,18 @@
             <div> <img class="tool-icon" src="icons-new/brush-new.png">  
                 <input type="color" name="txt-color" value="#ff9190" oninput="setTxtColor(this.value)">
             </div>
-            <img class="tool-icon" onclick="switchLine()" src="icons-new/switch-new.png" >
-            <img src="icons-new/a-plus-new.png"  class="tool-icon" onclick="changeTxtSize(1)">
-            <img src="icons-new/a-minus-new.png" class="tool-icon" onclick="changeTxtSize(-1)">
-            <img src="icons/align-to-left.png" alt="" class="tool-icon" onclick="changeAlignTxt('ltr')">
-            <img src="icons/center-text-alignment.png" alt="" class="tool-icon" onclick="changeAlignTxt('center')">
-            <img src="icons/align-to-right.png" alt="" class="tool-icon" onclick="changeAlignTxt('rtl')">
+            <div >
+                <img class="tool-icon" onclick="switchLine()" src="icons-new/switch-new.png" >
+                <img src="icons-new/a-plus-new.png"  class="tool-icon" onclick="changeTxtSize(1)">
+                <img src="icons-new/a-minus-new.png" class="tool-icon" onclick="changeTxtSize(-1)">
+            </div>
+           
+            <div>
+                <img src="icons/align-to-left.png" alt="" class="tool-icon" onclick="changeAlignTxt('rtl')">
+                <img src="icons/center-text-alignment.png" alt="" class="tool-icon" onclick="changeAlignTxt('center')">
+                <img src="icons/align-to-right.png" alt="" class="tool-icon" onclick="changeAlignTxt('ltr')">
+            </div>
+           
         </section>
 
     </section>  
