@@ -7,7 +7,7 @@ var gMeme = {
         {
             txt:  'insert your text here',
             size: 40,
-            color: 'yellow',
+            color: 'white',
             align: 'center'
         },
         {
@@ -18,7 +18,6 @@ var gMeme = {
         }
     ]  
 }
-
 
 
 function getMeme(){

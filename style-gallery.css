@@ -10,6 +10,7 @@ body {
     margin: 0px;
     background-color: rgb(252, 243, 243);
     height: 100vh;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 }
 
 .main-layout {
@@ -119,7 +120,7 @@ canvas {
 }
 
 .editor-tools {
-    background-color: antiquewhite;
+    /* background-color: #e9c089; */
     height: 39vh;
     width: 35vh;
     display: flex;
@@ -136,6 +137,7 @@ canvas {
     background-color: #ffffff;
     border: 1px solid #c2c2c2;
     padding-left: 20%;
+    font-size: 20px;
 }
 
 .tool-icon {

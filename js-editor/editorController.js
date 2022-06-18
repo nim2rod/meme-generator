@@ -35,7 +35,10 @@ function renderTxtLine() {
 
   // }
   var fontSize = gMeme.lines[0].size // fontSize
-  gCtx.font = fontSize + 'px Arial'
+  gCtx.font = fontSize + 'px Impact'
+
+  gCtx.lineWidth = 3
+  gCtx.strokeStyle = 'yellow'
 
   gCtx.fillStyle = gMeme.lines[0].color // txtColor
 
