@@ -3,6 +3,7 @@ var gCtx
 var gElCanvas
 var gLine = 0
 
+
 function initEditor() {
   console.log('initt editor')
   document.querySelector('.editor-page').style.display = 'flex'
@@ -86,4 +87,21 @@ if(value === 'rtl') gMeme.lines[0].align = 'right'
 if(value === 'ltr') gMeme.lines[0].align = 'left'
 if(value === 'center') gMeme.lines[0].align = 'center'
 renderMeme()
+}
+
+function share(){
+  var shareBtn = document.querySelector('.share-btn')
+  shareBtn.addEventListener('click', event => {
+    if(navigator.share) {
+      navigator.share({
+        text: 'great seccess ',
+        url: 'https://www.google.com/'
+      }).then(() => { 
+        console.log('thanks for sharing!')
+      })
+      .catch((err) => console.error(err))
+    } else{
+      alert('this browser is not support sharing')
+    }
+  })
 }

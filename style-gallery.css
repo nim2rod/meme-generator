@@ -130,6 +130,15 @@ canvas {
     gap: 10px;
 }
 
+.share-btn{
+    border-radius: 2em;
+    color: #020202;
+    background-color: rgb(181, 233, 248);
+    font-size:x-large;
+    border-style: solid ;
+    border-color: #ae9c35;
+}
+
 .txt-box {
     width: 210px;
     height: 40px;
