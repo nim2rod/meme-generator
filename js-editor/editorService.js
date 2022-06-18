@@ -13,7 +13,7 @@ var gMeme = {
         {
             txt:  'insert second line',
             size: 40,
-            color: 'yellow',
+            color: 'white',
             align: 'center'
         }
     ]  
