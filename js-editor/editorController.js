@@ -126,4 +126,5 @@ function shareCanvas(){
     };
     navigator.share(shareData);
   }
+  console.log('share canvas');
 }
