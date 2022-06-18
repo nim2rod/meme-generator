@@ -19,7 +19,6 @@ function renderMeme() {
 }
 
 function renderImg() {
-  //לרנדר תמונה על הקנבס
   var picIdx = gMeme.selectedImgId
   document.querySelector(
     '.img-teporary-container'

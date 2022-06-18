@@ -156,3 +156,17 @@ canvas {
     height: 50px;
     margin-right: 8px;
 }
+
+.download-btn{
+    font-size: 30px;
+    background-color: bisque;
+    border-radius: 2em;
+    padding: 7px;
+}
+
+.brush-box{
+    height: 85%;
+    margin-bottom: 3px;
+    margin-left: 10px;
+}
+
