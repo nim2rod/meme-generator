@@ -11,18 +11,21 @@
 
 <body onload="initGallery()">
 
-    <header class="header-container main-layout flex space-between">
-        <div class="main-logo">memegen</div>
-        <div class="right-side-header">
-            <input
-            type="file"
-            class="file-input btn-pointer"
-            name="image"
-            onchange="onImgInput(event)"
-          />
-            <button class="btn-gallery-header hide-on-mobile btn-pointer" onclick="backToGallery()">Gallery</button>
-            <span class="hide-on-mobile">About</span>
+    <header class="header-container ">
+        <div class="main-header main-layout flex space-between">
+            <div class="main-logo">memegen</div>
+            <div class="right-side-header">
+                <input
+                type="file"
+                class="file-input btn-pointer"
+                name="image"
+                onchange="onImgInput(event)"
+              />
+                <button class="btn-gallery-header hide-on-mobile btn-pointer" onclick="backToGallery()">Gallery</button>
+                <span class="hide-on-mobile">About</span>
+            </div>
         </div>
+        
     </header>
 
     <div class="search-bar main-layout">

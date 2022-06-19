@@ -17,27 +17,27 @@ function renderMeme() {
   renderImg()
 }
 
-function renderImg() {
-  var picIdx = gMeme.selectedImgId
-  document.querySelector(
-    '.img-teporary-container'
-  ).innerHTML = `<img src="meme-imgs(square)/${picIdx}.jpg" class="img-meme" style="display: none" />`
-  var elImg = document.querySelector('.img-meme')
-  if (!imgFlag) gCtx.drawImage(elImg, 0, 0, gElCanvas.height, gElCanvas.width)
-  else gCtx.drawImage(imgFromUser, 0, 0)
-  gMeme.lines.forEach(renderTxtLine)
-}
-
 // function renderImg() {
 //   var picIdx = gMeme.selectedImgId
-//   var img = new Image()
-//   img.src = `meme-imgs(square)/${picIdx}.jpg`   
-//   img.onload = () => {
-//     if (!imgFlag)  gCtx.drawImage(img, 0, 0, gElCanvas.height, gElCanvas.width)
-//     else gCtx.drawImage(imgFromUser, 0, 0)
-//   }
-//    gMeme.lines.forEach(renderTxtLine)
+//   document.querySelector(
+//     '.img-teporary-container'
+//   ).innerHTML = `<img src="meme-imgs(square)/${picIdx}.jpg" class="img-meme" style="display: none" />`
+//   var elImg = document.querySelector('.img-meme')
+//   if (!imgFlag) gCtx.drawImage(elImg, 0, 0, gElCanvas.height, gElCanvas.width)
+//   else gCtx.drawImage(imgFromUser, 0, 0)
+//   gMeme.lines.forEach(renderTxtLine)
 // }
+
+function renderImg() {
+  var picIdx = gMeme.selectedImgId
+  var img = new Image()
+  img.src = `meme-imgs(square)/${picIdx}.jpg`   
+  img.onload = () => {
+    if (!imgFlag)  gCtx.drawImage(img, 0, 0, gElCanvas.height, gElCanvas.width)
+    else gCtx.drawImage(imgFromUser, 0, 0)
+    gMeme.lines.forEach(renderTxtLine)
+  }
+}
 
 
 function renderTxtLine(element,index) {

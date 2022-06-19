@@ -29,6 +29,13 @@ body {
     align-items: center;
 }
 
+.main-header{
+    background-color: rgb(211, 141, 11);
+    color: whitesmoke;
+    height: 5vh;
+    align-items: center;
+}
+
 .main-logo {
     font-family: Eurofurenceregular;
     font-size: 30px;

@@ -19,8 +19,6 @@ var gMeme = {
     ]  
 }
 
-
-
 function createLine(){
     return {
         txt:  'insert text',
