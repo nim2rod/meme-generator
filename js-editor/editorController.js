@@ -8,6 +8,8 @@ function initEditor() {
   document.querySelector('.editor-page').style.display = 'flex'
   document.querySelector('.promotion-bar').style.display = 'none'
   document.querySelector('.search-bar').style.display = 'none'
+  document.querySelector('.file-input').style.display = 'none'
+  document.querySelector('.saveStorage').style.display = 'block'
   gElCanvas = document.querySelector('canvas')
   gCtx = gElCanvas.getContext('2d')
   renderMeme()
@@ -41,11 +43,10 @@ function renderImg() {
 
 
 function renderTxtLine(element,index) {
-console.log('element:',element)
-console.log('index',index)
-
   var fontSize = gMeme.lines[index].size // fontSize
-  gCtx.font = fontSize + 'px Impact'
+  var fontLine = gMeme.lines[index].font
+
+  gCtx.font = fontSize + 'px ' + fontLine
 
   gCtx.lineWidth = 3.5
   gCtx.strokeStyle = 'black'
@@ -67,8 +68,12 @@ function changeTxtSize(x) {
   fontSize = gMeme.lines[gLine].size
   if (x < 0) fontSize -= 10
   if (x > 0) fontSize += 10
-  // gCtx.font = fontSize + 'px'
+  if (fontSize < 0) fontSize = 0
+  if (fontSize > 80) fontSize = 80
   gMeme.lines[gLine].size = fontSize
+ 
+  console.log('gMeme.lines[0].size',gMeme.lines[0].size)
+  console.log('gMeme.lines[1].size',gMeme.lines[1].size)
   renderMeme()
 }
 
