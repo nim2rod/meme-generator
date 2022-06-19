@@ -16,11 +16,11 @@
         <div class="right-side-header">
             <input
             type="file"
-            class="file-input"
+            class="file-input btn-pointer"
             name="image"
             onchange="onImgInput(event)"
           />
-            <button class="btn-gallery-header hide-on-mobile">Gallery</button>
+            <button class="btn-gallery-header hide-on-mobile btn-pointer" onclick="backToGallery()">Gallery</button>
             <span class="hide-on-mobile">About</span>
         </div>
     </header>
@@ -39,7 +39,7 @@
         <section class="editor-tools">
             <input type="text" class="txt-box" name="add-text" placeholder="Type here" oninput="setLineTxt()">
             <div> <img class="tool-icon" src="icons-new/brush-new.png">  
-                <input type="color" class="brush-box" name="txt-color" value="#ff9190" oninput="setTxtColor(this.value)">
+                <input type="color" class="brush-box btn-pointer" name="txt-color" value="#ff9190" oninput="setTxtColor(this.value)">
                 <!-- <button class="share-btn" onclick="share()">share url</button> -->
                 <!-- <button class="share-btn" onclick="shareCanvas()">share canvas</button> -->
             </div>

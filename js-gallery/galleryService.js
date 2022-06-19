@@ -39,6 +39,20 @@ var gImgs = [
     }
 ]
 
+// var gImgs = createImgs()
+
+// function createImgs() {
+//     const imgs = []
+//     for (var i = 0; i < 9; i++) {
+//        var img =  _createImg(i,`meme-imgs(square)/${i}.jpg`)
+//         imgs.push(img)
+//     }
+//     return imgs
+// }
+
+// function _createImg(id,url) {
+// return {id, url}
+// }
 // function renderGallery() {
 //     var strHTML = ''
 //     for(var i=0 ; i < gImgs.length ; i++ ){
@@ -50,7 +64,11 @@ var gImgs = [
 function renderGallery() {
     var strHTML = ''
     for(var i=0 ; i < gImgs.length ; i++ ){
-      strHTML +=  `<img src="${gImgs[i].url}" onclick="onImgSelect(${i+1})" class="img imgId${i+1}">`
+      strHTML +=  `<img src="${gImgs[i].url}" onclick="onImgSelect(${i+1})" class="btn-pointer img imgId${i+1}">`
     }
+    // gImgs.map((img, idx => {
+    //     strHTML +=  `<img src="${gImgs[i].url}" onclick="onImgSelect(${i+1})" class="btn-pointer img imgId${i+1}">`
+    
+    // }))
     document.querySelector('.gallery').innerHTML = strHTML
 }

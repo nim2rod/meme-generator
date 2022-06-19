@@ -1,5 +1,6 @@
 'use strict'
-
+var imgFromUser 
+var imgFlag = false
 function downloadImg(elLink) {
     var imgContent = gElCanvas.toDataURL('image/jpeg')// image/jpeg the default format
     elLink.href = imgContent
@@ -18,13 +19,17 @@ function loadImageFromInput(ev, onImageReady) {
         img.src = event.target.result // Set the img src to the img file we read
         //Run the callBack func , To render the img on the canvas
         img.onload = onImageReady.bind(null, img)
+        imgFromUser = img
+        imgFlag =true
     }
     reader.readAsDataURL(ev.target.files[0]) // Read the file we picked
 }
 
 function renderImg2(img) {
+  console.log('imguser',imgFromUser)
     //Draw the img on the canvas
     gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
+    
 }
 
 

@@ -153,6 +153,7 @@ canvas {
     padding: 2%;
     height: 50px;
     margin-right: 8px;
+    cursor: pointer;
 }
 
 .download-btn{

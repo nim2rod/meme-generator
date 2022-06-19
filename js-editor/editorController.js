@@ -23,9 +23,13 @@ function renderImg() {
   document.querySelector(
     '.img-teporary-container'
   ).innerHTML = `<img src="meme-imgs(square)/${picIdx}.jpg" class="img-meme" style="display: none" />`
-
+// img.height / img. width = ratio %
+// resize canvas
+// height is larger = elGcanvas.height * ratio
   var elImg = document.querySelector('.img-meme')
-  gCtx.drawImage(elImg, 0, 0)
+  if(!imgFlag)  gCtx.drawImage(elImg, 0, 0,gElCanvas.height,gElCanvas.width)
+  else  gCtx.drawImage(imgFromUser, 0, 0)
+ 
 }
 
 function renderTxtLine() {
