@@ -39,6 +39,26 @@ var gImgs = [
     }
 ]
 
+
+function renderGallery() {
+    var strHTML = ''
+    for(var i=0 ; i < gImgs.length ; i++ ){
+      strHTML +=  `<img src="${gImgs[i].url}" onclick="onImgSelect(${i+1})" class="btn-pointer img imgId${i+1}">`
+    }
+    // gImgs.map((img, idx => {
+    //     strHTML +=  `<img src="${gImgs[i].url}" onclick="onImgSelect(${i+1})" class="btn-pointer img imgId${i+1}">`
+    
+    // }))
+    document.querySelector('.gallery').innerHTML = strHTML
+}
+
+
+
+
+
+
+
+
 // var gImgs = createImgs()
 
 // function createImgs() {
@@ -60,15 +80,3 @@ var gImgs = [
 //     }
 //     document.querySelector('.pictures').innerHTML = strHTML
 // }
-
-function renderGallery() {
-    var strHTML = ''
-    for(var i=0 ; i < gImgs.length ; i++ ){
-      strHTML +=  `<img src="${gImgs[i].url}" onclick="onImgSelect(${i+1})" class="btn-pointer img imgId${i+1}">`
-    }
-    // gImgs.map((img, idx => {
-    //     strHTML +=  `<img src="${gImgs[i].url}" onclick="onImgSelect(${i+1})" class="btn-pointer img imgId${i+1}">`
-    
-    // }))
-    document.querySelector('.gallery').innerHTML = strHTML
-}

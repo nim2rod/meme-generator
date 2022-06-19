@@ -38,7 +38,9 @@
 
         <section class="editor-tools">
             <input type="text" class="txt-box" name="add-text" placeholder="Type here" oninput="setLineTxt()">
-            <div> <img class="tool-icon" src="icons-new/brush-new.png">  
+            <div>
+                <img src="icons-new/plus-txt-new.png" class="tool-icon" onclick="addLine()">
+                 <img class="tool-icon" src="icons-new/brush-new.png">  
                 <input type="color" class="brush-box btn-pointer" name="txt-color" value="#ff9190" oninput="setTxtColor(this.value)">
                 <!-- <button class="share-btn" onclick="share()">share url</button> -->
                 <!-- <button class="share-btn" onclick="shareCanvas()">share canvas</button> -->

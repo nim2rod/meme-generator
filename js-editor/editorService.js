@@ -20,10 +20,16 @@ var gMeme = {
 }
 
 
-function getMeme(){
-    console.log('getMeme is on');
-    renderMeme()
+
+function createLine(){
+    return {
+        txt:  'insert text',
+        size: 40,
+        color: 'white',
+        align: 'center'
+    }
 }
+
 
 
 
