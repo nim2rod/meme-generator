@@ -84,6 +84,7 @@
 
     .editor-tools {
         background-color: #e9c089;
+        border-radius: 2em;
     }
 
     .file-input {

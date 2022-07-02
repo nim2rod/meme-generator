@@ -92,6 +92,7 @@ function setTxtColor(color) {
 function switchLine() {
   gLine++
   if(gLine >= gMeme.lines.length) gLine = 0
+  document.querySelector('.row-number').innerText = `row ${gLine+1}`
 }
 
 function changeAlignTxt(value) {

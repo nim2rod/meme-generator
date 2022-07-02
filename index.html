@@ -14,14 +14,17 @@
     <header class="header-container ">
         <div class="main-header main-layout flex space-between">
             <div class="main-logo">memegen</div>
-            <div class="right-side-header">
+            <div class="right-side-header flex">
+                <div class="saveStorage btn-pointer" style="display:none" onclick="_saveMemeToStorage()">
+                    SAVE MEME
+                </div>
                 <input type="file" class="file-input btn-pointer" name="image" onchange="onImgInput(event)" />
                 <button class="btn-gallery-header hide-on-mobile btn-pointer" onclick="backToGallery()">Gallery</button>
                 <span class="hide-on-mobile">About</span>
             </div>
-            <div class="saveStorage" style="display:none" onclick="_saveMemeToStorage()">
+            <!-- <div class="saveStorage" style="display:none" onclick="_saveMemeToStorage()">
                 SAVE MEME
-            </div>
+            </div> -->
         </div>
 
     </header>
@@ -39,11 +42,11 @@
 
         <section class="editor-tools">
             <input type="text" class="txt-box" name="add-text" placeholder="Type here" oninput="setLineTxt()">
-            <div>
-                <img src="icons-new/plus-txt-new.png" class="tool-icon" onclick="addLine()">
-                <img class="tool-icon" src="icons-new/brush-new.png">
+            <div class="flex">
+                <div class="row-number">row 1</div>
+                <img class="tool-icon" onclick="switchLine()" src="icons-new/switch-new.png">      
                 <input type="color" class="brush-box btn-pointer" name="txt-color" value="#ff9190"
-                    oninput="setTxtColor(this.value)">
+                    oninput="setTxtColor(this.value)" >
                 <!-- <button class="share-btn" onclick="share()">share url</button> -->
                 <!-- <button class="share-btn" onclick="shareCanvas()">share canvas</button> -->
             </div>
@@ -52,7 +55,7 @@
                 <a href="#" class="download-btn" onclick="downloadImg(this)" download="my-img.jpg">Download as jpeg</a>
             </div>
             <div>
-                <img class="tool-icon" onclick="switchLine()" src="icons-new/switch-new.png">
+                <img src="icons-new/plus-txt-new.png" class="tool-icon" onclick="addLine()">
                 <img src="icons-new/a-plus-new.png" class="tool-icon" onclick="changeTxtSize(1)">
                 <img src="icons-new/a-minus-new.png" class="tool-icon" onclick="changeTxtSize(-1)">
             </div>
